@@ -36,4 +36,10 @@ export class Env {
 
   @EnvString('MYSQL_DATABASE', 'nest_starter')
   static mysqlDatabase: () => string;
+
+  @EnvString('JWT_SECRET', 'jwt encryption secret key')
+  static jwtSecret: () => string;
+
+  @EnvNumber('JWT_EXPIRE', 24 * 3600)
+  static jwtExpire: () => number;
 }

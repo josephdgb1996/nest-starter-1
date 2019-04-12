@@ -1,4 +1,4 @@
-import { Resolver, Query, Args } from '@nestjs/graphql';
+import { Resolver, Query } from '@nestjs/graphql';
 
 @Resolver()
 export class AppResolver {
@@ -10,5 +10,10 @@ export class AppResolver {
   @Query()
   time() {
     return Date.now();
+  }
+
+  @Query()
+  restrictedAccess() {
+    return 'Você tem acesso';
   }
 }
