@@ -1,0 +1,8 @@
+# Aceita timestamp (1555009092113) ou ISO string ("2019-04-11T18:58:33.321Z")
+# Retorna ISO string
+scalar Date
+
+type Query {
+  status: String
+  time: Date
+}

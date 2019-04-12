@@ -1,10 +1,22 @@
+import * as controller from '@controller';
+import * as resolver from '@resolver';
+import * as service from '@service';
+
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { GraphQlConfig } from '@config/graphql';
+
+const controllers = Object.values(controller);
+const resolvers = Object.values(resolver);
+const services = Object.values(service);
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    GraphQlConfig(),
+  ],
+  controllers,
+  providers: [
+    ...resolvers,
+    ...services,
+  ],
 })
 export class AppModule {}

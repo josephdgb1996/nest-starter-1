@@ -19,6 +19,17 @@
       "esnext.array"
     ],
     "paths": {
+      "@controller": ["controller"],
+      "@resolver": ["resolver"],
+      "@service": ["service"],
+
+      "@config/*": ["config/*"],
+      "@controller/*": ["controller/*"],
+      "@decorator/*": ["decorator/*"],
+      "@enum/*": ["enum/*"],
+      "@resolver/*": ["resolver/*"],
+      "@service/*": ["service/*"],
+      "@util/*": ["util/*"]
     }
   },
   "include": ["src/**/*"],
