@@ -16,21 +16,27 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/.bin/typeorm -f cli-ormconfig.ts"
   },
   "dependencies": {
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
     "@nestjs/graphql": "^6.0.5",
     "@nestjs/platform-express": "^6.0.0",
+    "@nestjs/typeorm": "^6.0.0",
     "apollo-server-express": "^2.4.8",
+    "bcrypt": "^3.0.5",
+    "class-transformer": "^0.2.0",
     "class-validator": "^0.9.1",
     "dotenv": "^7.0.0",
     "graphql": "^14.2.1",
     "graphql-tools": "^4.0.4",
+    "mysql": "^2.16.0",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "typeorm": "^0.2.16"
   },
   "devDependencies": {
     "@nestjs/testing": "^6.0.0",

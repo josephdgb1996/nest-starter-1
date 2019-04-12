@@ -21,4 +21,19 @@ export class Env {
 
   @EnvString('API_PREFIX', 'api')
   static apiPrefix: () => string;
+
+  @EnvString('MYSQL_HOST', 'localhost')
+  static mysqlHost: () => string;
+
+  @EnvNumber('MYSQL_PORT', 3306)
+  static mysqlPort: () => number;
+
+  @EnvString('MYSQL_USER', 'root')
+  static mysqlUser: () => string;
+
+  @EnvString('MYSQL_PASSWORD', 'root')
+  static mysqlPassword: () => string;
+
+  @EnvString('MYSQL_DATABASE', 'nest_starter')
+  static mysqlDatabase: () => string;
 }

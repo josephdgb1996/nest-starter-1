@@ -20,6 +20,8 @@
     ],
     "paths": {
       "@controller": ["controller"],
+      "@migration": ["migration"],
+      "@model": ["model"],
       "@resolver": ["resolver"],
       "@service": ["service"],
 
@@ -27,6 +29,8 @@
       "@controller/*": ["controller/*"],
       "@decorator/*": ["decorator/*"],
       "@enum/*": ["enum/*"],
+      "@migration/*": ["migration/*"],
+      "@model/*": ["model/*"],
       "@resolver/*": ["resolver/*"],
       "@service/*": ["service/*"],
       "@util/*": ["util/*"]
