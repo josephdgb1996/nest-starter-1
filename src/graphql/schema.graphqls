@@ -5,10 +5,12 @@ scalar Date
 type Query {
   status: String
   time: Date
-  restrictedAccess: String
+  loginTest: String
+  user(id: Int!): User
 }
 
 type Mutation {
   createUser(username: String!, password: String!): User
   login(username: String!, password: String!): String
+  sendMessage(recipientId: Int!, message: String!): Message
 }

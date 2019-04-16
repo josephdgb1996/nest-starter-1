@@ -12,13 +12,29 @@ export class UserService {
   ) {}
 
   async createUser(username: string, plainPassword: string) {
-    try {
-      const computationDifficulty = 10;
-      const password = hashSync(plainPassword, computationDifficulty);
-      const user = this.userRepository.create({ username, password });
-      return await this.userRepository.save(user);
-    } catch (ormError) {
+    if (!username || !plainPassword) {
       return null;
     }
+
+    const computationDifficulty = 10;
+    const password = hashSync(plainPassword, computationDifficulty);
+    const user = this.userRepository.create({ username, password });
+    return await this.userRepository.save(user);
+  }
+
+  async findById(id: number) {
+    if (!id) {
+      return null;
+    }
+
+    return this.userRepository.findOne({ where: { id} });
+  }
+
+  async findByUsername(username: string) {
+    if (!username) {
+      return null;
+    }
+
+    return this.userRepository.findOne({ where: { username} });
   }
 }

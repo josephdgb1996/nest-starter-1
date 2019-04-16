@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 export function EnvString(property: string, defaultValue: string) {
   return (target, key?: string) => {
     target[key] = () => process.env[property] ? process.env[property] : defaultValue;

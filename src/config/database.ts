@@ -9,7 +9,7 @@ import { Env } from '@config/env';
 const entities = Object.values(model);
 const migrations = Object.values(migration);
 
-export function DatabaseConfig(): TypeOrmModuleOptions & Partial<MysqlConnectionOptions> {
+export function DatabaseOptions(): TypeOrmModuleOptions & Partial<MysqlConnectionOptions> {
   return {
     type: 'mysql',
     host: Env.mysqlHost(),
@@ -31,10 +31,10 @@ export function DatabaseConfig(): TypeOrmModuleOptions & Partial<MysqlConnection
   };
 }
 
-export function DatabaseModule(): DynamicModule {
-  return TypeOrmModule.forRoot(DatabaseConfig());
+export function DatabaseConfig(): DynamicModule {
+  return TypeOrmModule.forRoot(DatabaseOptions());
 }
 
-export function ModelsModule(): DynamicModule {
+export function ModelsConfig(): DynamicModule {
   return TypeOrmModule.forFeature(entities);
 }

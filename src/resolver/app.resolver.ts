@@ -11,9 +11,4 @@ export class AppResolver {
   time() {
     return Date.now();
   }
-
-  @Query()
-  restrictedAccess() {
-    return 'Você tem acesso';
-  }
 }

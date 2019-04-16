@@ -20,17 +20,23 @@
     ],
     "paths": {
       "@controller": ["controller"],
+      "@dto": ["dto"],
+      "@guard": ["guard"],
       "@migration": ["migration"],
       "@model": ["model"],
+      "@pipe": ["pipe"],
       "@resolver": ["resolver"],
       "@service": ["service"],
 
       "@config/*": ["config/*"],
       "@controller/*": ["controller/*"],
       "@decorator/*": ["decorator/*"],
+      "@dto/*": ["dto/*"],
       "@enum/*": ["enum/*"],
+      "@guard/*": ["guard/*"],
       "@migration/*": ["migration/*"],
       "@model/*": ["model/*"],
+      "@pipe/*": ["pipe/*"],
       "@resolver/*": ["resolver/*"],
       "@service/*": ["service/*"],
       "@util/*": ["util/*"]

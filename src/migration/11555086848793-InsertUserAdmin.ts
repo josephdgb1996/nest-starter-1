@@ -8,10 +8,15 @@ export class InsertUserAdmin11555086848793 implements MigrationInterface {
     const userRepo = queryRunner.connection.getRepository(User);
     const computationDifficulty = 10;
 
-    await userRepo.save(userRepo.create({
-      username: 'admin',
-      password: hashSync('admin', computationDifficulty),
-    }));
+    try {
+      await userRepo.save(userRepo.create({
+        username: 'admin',
+        password: hashSync('admin', computationDifficulty),
+      }));
+    } catch (_) {
+      // admin já existe
+      return;
+    }
   }
 
   public async down(queryRunner: QueryRunner): Promise<any> {

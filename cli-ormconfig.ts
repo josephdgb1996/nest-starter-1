@@ -9,6 +9,6 @@
  *    yarn typeorm schema:drop
  */
 
-import { DatabaseConfig } from './src/config/database';
+import { DatabaseOptions } from './src/config/database';
 
-module.exports = DatabaseConfig();
+module.exports = DatabaseOptions();
